@@ -29,7 +29,7 @@ class PersonalWorkOffTracker {
 
     public function fetchRecords($page_id) {
         $offset = ($page_id - 1) * 5;
-        $sql = "SELECT * FROM daily ORDER BY id DESC LIMIT $offset, 5";
+        $sql = "SELECT * FROM daily ORDER BY id ASC LIMIT $offset, 5";
         $result = $this->conn->query($sql);
         $total_hours = 0;
         $total_minutes = 0;
